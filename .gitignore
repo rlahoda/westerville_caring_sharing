@@ -17,4 +17,4 @@ node_modules
 /vendor
 
 # Zip files
-.zip
+*.zip
