@@ -1,0 +1,19 @@
+.noList {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.noListBlock {
+  & > li {
+    // display: inline-block;
+  }
+  padding: 0;
+  margin: 0;
+}
+
+:focus:not(:focus-visible) {outline:none}
+
+.smallText {
+  font-size: 10px;
+  font-weight: lighter;
+}

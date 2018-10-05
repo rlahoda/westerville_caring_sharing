@@ -1,0 +1,51 @@
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
+  $u1: unit($min-vw);
+  $u2: unit($max-vw);
+  $u3: unit($min-font-size);
+  $u4: unit($max-font-size);
+
+  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+    & {
+      font-size: $min-font-size;
+      @media screen and (min-width: $min-vw) {
+        font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+      }
+      @media screen and (min-width: $max-vw) {
+        font-size: $max-font-size;
+      }
+    }
+  }
+}
+
+
+body {
+  font-family: 'Raleway', sans-serif; // weights: 300, 400, 600, 800
+}
+
+
+$min_width: 320px;
+$max_width: 1200px;
+$h1_min_font: 25px;
+$h1_max_font: 40px;
+$h2_min_font: 15px;
+$h2_max_font: 20px;
+$h3_min_font: 15px;
+$h3_max_font: 20px;
+h1 {
+  font-weight: 800;
+  @include fluid-type($min_width, $max_width, $h1_min_font, $h1_max_font);
+}
+
+h2 {
+  font-weight: 600;
+  @include fluid-type($min_width, $max_width, $h2_min_font, $h2_max_font);
+}
+
+h3 {
+  font-weight: 400;
+  @include fluid-type($min_width, $max_width, $h3_min_font, $h3_max_font);
+}

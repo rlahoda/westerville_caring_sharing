@@ -1,11 +1,11 @@
 const basePaths = {
   src: 'dev/',
-  dest: './prod/',
+  dest: 'prod/',
 };
 const paths = {
   images: {
-    src: basePaths.src + 'assets/img/',
-    dest: basePaths.dest + 'assets/img/'
+    src: basePaths.src + 'images/',
+    dest: basePaths.dest + 'images/'
   },
   templates: {
     src: basePaths.src + 'templates/'
@@ -26,7 +26,7 @@ const paths = {
 const globs = {
   "scripts": ['dev/**/*.js'],
   "styles": ['dev/scss/**/*.scss'],
-  "images": ['dev/assets/**/*'],
+  "images": ['dev/images/**/*'],
   "vendor": ['dev/vendor/**/*'],
   "twig": ['dev/**/*.twig'],
 }
@@ -59,7 +59,7 @@ const minify = require('gulp-minify');
 gulp.task('browser-sync', function() {
   browserSync.init({
     server: {
-      baseDir: "./prod/"
+      baseDir: "prod/"
     }
   });
 });
@@ -76,7 +76,7 @@ gulp.task('twig', function () {
     'use strict';
     return gulp.src('dev/templates/*.twig')
         .pipe(twig())
-        .pipe(gulp.dest('./prod/'));
+        .pipe(gulp.dest('prod/'));
 });
 
 // Adds the data from the JSON files into the Twig templates as they're being compiled
@@ -88,7 +88,7 @@ gulp.task('twig-json', function () {
         }))
 
         .pipe(twig())
-        .pipe(gulp.dest('./prod/'));
+        .pipe(gulp.dest('prod/'));
 });
 
 //PostCSS process and SASS compilation
@@ -123,7 +123,7 @@ gulp.task('css', function() {
 //Copy vendor packages to appropriate folder, this would be used for 3rd party plugins like bootstrap and just copies them straight over from the dev folder to the docs folder
 gulp.task('vendor', function() {
   gulp.src('./dev/vendor/**/*.*')
-    .pipe(gulp.dest('./vendor/'));
+    .pipe(gulp.dest('vendor/'));
 });
 
 // Concatenate JS files into a single file and minify
@@ -131,13 +131,13 @@ gulp.task('concat', function() {
   return gulp.src('./dev/scripts/*.js')
     .pipe(concat('scripts.js'))
     .pipe(minify())
-    .pipe(gulp.dest('./scripts'));
+    .pipe(gulp.dest('prod/scripts'));
 });
 
 //Copy images to appropriate folder, this just copies them straight over from the dev folder to the docs folder
 gulp.task('images', function() {
   gulp.src(globs.images)
-    .pipe(gulp.dest('./assets/'));
+    .pipe(gulp.dest('prod/images/'));
 });
 
 // Watch task, this watches the different folders and when there's a change, it triggers the appropriate function. The bottom one triggers the page refresh in your browser
