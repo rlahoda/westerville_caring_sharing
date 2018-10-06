@@ -44,6 +44,7 @@ h2 {
   color: $primary-color;
   font-weight: 600;
   @include fluid-type($min_width, $max_width, $h2_min_font, $h2_max_font);
+  border-bottom: $primary-color solid 1px;
 }
 
 h3 {

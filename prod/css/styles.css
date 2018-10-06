@@ -236,8 +236,9 @@ h1 {
         font-size: 40px; } }
 
 h2 {
-  color: blue;
-  font-weight: 600; }
+  color: #F54D3F;
+  font-weight: 600;
+  border-bottom: #F54D3F solid 1px; }
   h2 {
     font-size: 15px; }
     @media screen and (min-width: 320px) {
@@ -301,8 +302,26 @@ header {
           align-items: center;
   background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
   -webkit-box-shadow: inset 0 0 15px grey;
           box-shadow: inset 0 0 15px grey; }
+
+.titleContainer {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: rgba(255, 255, 255, 0.78); }
 
 .navbarContainer {
   width: 100%;
@@ -370,10 +389,10 @@ header {
   background-size: cover; }
 
 .flexText {
-  padding: 40px; }
+  padding: 80px; }
 
 .readMoreLink {
-  background-color: blue;
+  background-color: #F54D3F;
   color: white;
   padding: 15px; }
 
@@ -391,5 +410,8 @@ header {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end; }
+
+ul.infoList > li {
+  margin: 25px; }
 
 /*# sourceMappingURL=styles.css.map */

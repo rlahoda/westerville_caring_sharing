@@ -11,7 +11,16 @@ header {
   align-items: center;
   background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
   box-shadow: inset 0 0 15px grey;
+  }
+  .titleContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.78);
   }
 
 .navbarContainer {
