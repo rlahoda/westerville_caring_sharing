@@ -236,6 +236,7 @@ h1 {
         font-size: 40px; } }
 
 h2 {
+  color: blue;
   font-weight: 600; }
   h2 {
     font-size: 15px; }
@@ -256,6 +257,12 @@ h3 {
     @media screen and (min-width: 1200px) {
       h3 {
         font-size: 20px; } }
+
+p {
+  line-height: 1.5; }
+
+.centerText {
+  text-align: center; }
 
 .noList {
   list-style-type: none;
@@ -341,5 +348,48 @@ header {
 
 .pageSubHeading {
   margin-top: 0; }
+
+.flexContainer {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+.flexItem {
+  margin-bottom: 50px;
+  width: 40%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto; }
+
+.flexImage {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.flexText {
+  padding: 40px; }
+
+.readMoreLink {
+  background-color: blue;
+  color: white;
+  padding: 15px; }
+
+.readMoreContainer {
+  width: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end; }
 
 /*# sourceMappingURL=styles.css.map */

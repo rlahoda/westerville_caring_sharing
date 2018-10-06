@@ -4,3 +4,41 @@ $primary-color: blue;
 @import "partials/typography";
 @import "partials/utility";
 @import "partials/nav";
+
+
+.flexContainer {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flexItem {
+  margin-bottom: 50px;
+  width: 40%;
+  flex: 1 1 auto;
+}
+
+.flexImage {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.flexText {
+  padding: 40px;
+}
+
+.readMoreLink {
+  background-color: $primary-color;
+  color: white;
+  padding: 15px;
+  // margin: 15px 0;
+}
+
+.readMoreContainer {
+  width: 100%;
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}

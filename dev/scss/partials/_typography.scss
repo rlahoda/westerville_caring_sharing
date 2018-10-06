@@ -41,6 +41,7 @@ h1 {
 }
 
 h2 {
+  color: $primary-color;
   font-weight: 600;
   @include fluid-type($min_width, $max_width, $h2_min_font, $h2_max_font);
 }
@@ -48,4 +49,12 @@ h2 {
 h3 {
   font-weight: 400;
   @include fluid-type($min_width, $max_width, $h3_min_font, $h3_max_font);
+}
+
+p {
+  line-height: 1.5;
+}
+
+.centerText {
+  text-align: center;
 }
