@@ -1,8 +1,9 @@
 {
   "pageTitle" : "Westerville Caring and Sharing",
   "pageSubHeading": "Serving Westerville and the surrounding areas since 1988",
-  "headerImage": "girlheart.jpg",
-  "image1": "girlheart.jpg",
-  "image2": "girlheart.jpg",
-  "image3": "girlheart.jpg"
+  "pageOn": "pageOnHome",
+  "headerImage": "handsback.jpg",
+  "image1": "hearthands.jpg",
+  "image2": "hearthands.jpg",
+  "image3": "hearthands.jpg"
 }

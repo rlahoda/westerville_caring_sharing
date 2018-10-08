@@ -38,13 +38,16 @@ $h3_max_font: 20px;
 h1 {
   font-weight: 800;
   @include fluid-type($min_width, $max_width, $h1_min_font, $h1_max_font);
+  font-family: 'Cinzel', serif;
 }
 
 h2 {
   color: $primary-color;
-  font-weight: 600;
+  font-weight: 700;
   @include fluid-type($min_width, $max_width, $h2_min_font, $h2_max_font);
   border-bottom: $primary-color solid 1px;
+  font-family: 'Cinzel', serif;
+
 }
 
 h3 {

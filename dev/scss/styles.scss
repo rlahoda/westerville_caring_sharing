@@ -1,4 +1,4 @@
-$primary-color: #F54D3F;
+$primary-color: #af232e;
 
 @import "partials/reset";
 @import "partials/typography";
@@ -33,6 +33,11 @@ $primary-color: #F54D3F;
   color: white;
   padding: 15px;
   // margin: 15px 0;
+  &:hover {
+    background-color: darken($primary-color, 15);
+    transition-property: all;
+    transition-duration: 0.5s;
+  }
 }
 
 .readMoreContainer {

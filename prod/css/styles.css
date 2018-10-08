@@ -225,7 +225,8 @@ body {
   font-family: 'Raleway', sans-serif; }
 
 h1 {
-  font-weight: 800; }
+  font-weight: 800;
+  font-family: 'Cinzel', serif; }
   h1 {
     font-size: 25px; }
     @media screen and (min-width: 320px) {
@@ -236,9 +237,10 @@ h1 {
         font-size: 40px; } }
 
 h2 {
-  color: #F54D3F;
-  font-weight: 600;
-  border-bottom: #F54D3F solid 1px; }
+  color: #af232e;
+  font-weight: 700;
+  border-bottom: #af232e solid 1px;
+  font-family: 'Cinzel', serif; }
   h2 {
     font-size: 15px; }
     @media screen and (min-width: 320px) {
@@ -339,7 +341,16 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: black;
+  text-align: center;
   padding: 15px 25px; }
   .navList {
     font-size: 15px; }
@@ -352,14 +363,32 @@ header {
   .navList a {
     color: inherit; }
   .navList > li {
-    padding: 15px 25px; }
-  .navList > li:nth-child(1) {
-    font-weight: 600; }
+    padding: 15px 15px; }
 
 .navLink {
   text-decoration: none; }
   .navLink:hover {
-    text-decoration: underline; }
+    border-bottom: 1px solid black; }
+
+.navLinkSpecial {
+  background-color: #af232e;
+  color: white;
+  border-radius: 5px;
+  -webkit-box-shadow: 5px 5px 5px #6f161d;
+          box-shadow: 5px 5px 5px #6f161d;
+  -webkit-transition-property: -webkit-box-shadow;
+  transition-property: -webkit-box-shadow;
+  transition-property: box-shadow;
+  transition-property: box-shadow, -webkit-box-shadow;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s; }
+  .navLinkSpecial:hover {
+    -webkit-box-shadow: 15px 15px 15px #6f161d;
+            box-shadow: 15px 15px 15px #6f161d;
+    -webkit-transition-property: all;
+    transition-property: all;
+    -webkit-transition-duration: 1s;
+            transition-duration: 1s; }
 
 .logo {
   width: 90px;
@@ -367,6 +396,34 @@ header {
 
 .pageSubHeading {
   margin-top: 0; }
+
+.pageOnHome #homeLink {
+  font-weight: 600;
+  border-bottom: 1px solid #af232e; }
+
+.pageOnAbout #aboutLink {
+  font-weight: 600;
+  border-bottom: 1px solid #af232e; }
+
+.pageOnProjects #projectsLink {
+  font-weight: 600;
+  border-bottom: 1px solid #af232e; }
+
+.pageOnPrograms #programsLink {
+  font-weight: 600;
+  border-bottom: 1px solid #af232e; }
+
+.pageOnWhoweserve #whoweserveLink {
+  font-weight: 600;
+  border-bottom: 1px solid #af232e; }
+
+.pageOnVolunteer #volunteerLink {
+  font-weight: 600;
+  border-bottom: 1px solid #af232e; }
+
+.pageOnContact #contactLink {
+  font-weight: 600;
+  border-bottom: 1px solid #af232e; }
 
 .flexContainer {
   width: 100%;
@@ -392,9 +449,15 @@ header {
   padding: 80px; }
 
 .readMoreLink {
-  background-color: #F54D3F;
+  background-color: #af232e;
   color: white;
   padding: 15px; }
+  .readMoreLink:hover {
+    background-color: #6f161d;
+    -webkit-transition-property: all;
+    transition-property: all;
+    -webkit-transition-duration: 0.5s;
+            transition-duration: 0.5s; }
 
 .readMoreContainer {
   width: 100%;
