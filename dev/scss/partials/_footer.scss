@@ -1,0 +1,32 @@
+.footerLinkContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.footerLink {
+  padding: 15px;
+  margin: 15px;
+}
+
+.footerLogo {
+  margin: 40px 40px 0 40px;
+  width: 150px;
+  transition-property: all;
+  transition-duration: 1s;
+  &:hover {
+    margin: 20px 20px 0 20px;
+    width: 170px;
+    transition-property: all;
+    transition-duration: 1s;
+  }
+}
+
+.footerBox {
+  margin-top: 60px;
+  background-color: $primary-color;
+  color: white;
+  & a {
+    color: inherit;
+  }
+}

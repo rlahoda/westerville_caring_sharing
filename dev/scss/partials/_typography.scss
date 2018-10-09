@@ -55,6 +55,10 @@ h3 {
   @include fluid-type($min_width, $max_width, $h3_min_font, $h3_max_font);
 }
 
+h4 {
+  letter-spacing: 0.1em;
+}
+
 p {
   line-height: 1.5;
 }
