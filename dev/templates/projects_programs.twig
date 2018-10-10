@@ -1,0 +1,29 @@
+{% extends 'base.twig' %}
+
+{% block primarycontent %}
+<main>
+<div class="flexContainer">
+  <div class="flexImage flexItem" style="background-image: url('images/{{ image1 }}')"></div>
+  <div class="flexText flexItem">
+    <h2>Holiday Project</h2>
+    <p>The Holiday Project, which was started in 1988, has two components—Holiday Gift Sponsorship and Food Drive. The Holiday Project helps students and their families with items from their wish list, food basket, gift certificates, and personal hygiene products. Westerville Caring & Sharing cannot do what they do without the cooperation and participation of the Westerville community.</p>
+
+    <ul class="infoList">
+      <li>Sponsor a child or a teenager</li>
+    <li>Give a financial donation</li>
+    <li>Volunteer your time</li>
+    <li>Organize a food drive</li>
+  </ul>
+    <div class="readMoreContainer"><a class="readMoreLink" href="holiday_project.html">Learn More!</a><a class="readMoreLink" href="volunteer.html">Become A Volunteer!</a></div>
+  </div>
+  <div class="flexText flexItem">
+    <h2>Back To School Project</h2>
+    <p>The Back-to-School project is designed to help families with school-aged children who might be overwhelmed in providing school supplies and clothing. We give students the same type of school supplies that every other student has. This allows the students on subsidized lunch program to start the school year on an equal footing.</p>
+    <div class="readMoreContainer"><a class="readMoreLink" href="back_to_school_project.html">Learn More!</a><a class="readMoreLink" href="volunteer.html">Become A Volunteer!</a></div>
+  </div>
+
+  <div class="flexImage flexItem" style="background-image: url('images/{{ image2 }}')"></div>
+</div>
+</main>
+
+{% endblock %}

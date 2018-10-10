@@ -1,3 +1,14 @@
+@mixin respond-at($media) {
+  @media only screen and (min-width: $media) {
+    @content;
+  }
+}
+
+$bp-xsmall: 600px;
+$bp-small: 780px;
+$bp-med: 1060px;
+$bp-large: 1400px;
+
 $primary-color: #af232e;
 
 @import "partials/reset";
@@ -9,6 +20,9 @@ $primary-color: #af232e;
 
 .flexContainer {
   width: 100%;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
   flex-wrap: wrap;
   div:nth-last-of-type(-n+2) {
@@ -17,10 +31,13 @@ $primary-color: #af232e;
 }
 
 .flexItem {
-  margin-bottom: 50px;
-  width: 40%;
+  margin-bottom: 0;
+  width: 100%;
   flex: 1 1 auto;
-
+  @include respond-at($bp-med) {
+    width: 40%;
+    margin-bottom: 50px;
+  }
 }
 
 .flexItemFull {
@@ -36,7 +53,13 @@ $primary-color: #af232e;
 }
 
 .flexText {
-  padding: 80px;
+  padding: 0 10px;
+  @include respond-at($bp-small) {
+    padding: 0 40px;
+  }
+  @include respond-at($bp-med) {
+    padding: 80px;
+  }
 }
 
 .flexTextThin {
@@ -47,7 +70,7 @@ $primary-color: #af232e;
   background-color: $primary-color;
   color: white;
   padding: 15px;
-  // margin: 15px 0;
+  margin: 0 0 0 15px;
   &:hover {
     background-color: darken($primary-color, 15);
     transition-property: all;

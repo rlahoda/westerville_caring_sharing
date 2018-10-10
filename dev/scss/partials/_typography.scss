@@ -61,8 +61,13 @@ h4 {
 
 p {
   line-height: 1.5;
+  letter-spacing: 0.05em;
 }
 
 .centerText {
   text-align: center;
+}
+
+ul.infoList {
+  letter-spacing: 0.1em;
 }
