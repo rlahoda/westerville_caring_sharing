@@ -13,15 +13,16 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   box-shadow: inset 0 0 15px grey;
-  }
-  .titleContainer {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: rgba(255, 255, 255, 0.78);
-  }
+}
+
+.titleContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.78);
+}
 
 .navbarContainer {
   width: 100%;
@@ -34,9 +35,9 @@ header {
 }
 
 input[type=checkbox] {
-   position: absolute;
-   top: -9999px;
-   left: -9999px;
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
 }
 
 label {
@@ -56,11 +57,10 @@ input[type=checkbox]:checked ~ ul {
   transition-duration: 1s;
   background-color: #F7F7F7;
 }
-
 $min_width: 320px;
 $max_width: 1200px;
-$lastName_min_font: 15px;
-$lastName_max_font: 20px;
+$navList_min_font: 15px;
+$navList_max_font: 20px;
 
 nav {
   display: flex;
@@ -76,20 +76,21 @@ nav {
   align-items: center;
   max-height: 0;
   overflow: hidden;
-
   @include respond-at($bp-small) {
     max-height: none;
-    border: none
+    border: none;
   }
   color: black;
-  @include fluid-type($min_width, $max_width, $lastName_min_font, $lastName_max_font);
+  @include fluid-type($min_width, $max_width, $navList_min_font, $navList_max_font);
   text-align: center;
+
   & a {
     color: inherit;
   }
   padding: 15px 25px;
+
   & > li {
-    padding: 15px 15px;
+    padding: 15px;
     width: 100%;
     @include respond-at($bp-small) {
       width: auto;
@@ -107,6 +108,10 @@ nav {
   }
 }
 
+.logoContainer {
+  padding-left: 20px;
+}
+
 .logo {
   width: 90px;
   height: auto;
@@ -118,15 +123,13 @@ nav {
 
 #facebookLink {
   & > svg {
-  width: 40px;
-  height: 40px;
+    width: 40px;
+    height: 40px;
+  }
 }
-}
-
 // These trigger the bold/underline to indicate which page the user is currently on
-
 .pageOnHome {
-   #homeLink {
+  #homeLink {
     font-weight: 600;
     border-bottom: 1px solid $primary-color;
   }
@@ -134,37 +137,49 @@ nav {
 
 .pageOnAbout {
   #aboutLink {
-  font-weight: 600;
-  border-bottom: 1px solid $primary-color;
+    font-weight: 600;
+    border-bottom: 1px solid $primary-color;
   }
 }
+
 .pageOnProjects {
-#projectsLink {
-  font-weight: 600;
-  border-bottom: 1px solid $primary-color;
+  #projectsLink {
+    font-weight: 600;
+    border-bottom: 1px solid $primary-color;
+  }
 }
-}
+
 .pageOnPrograms {
-#programsLink {
-  font-weight: 600;
-  border-bottom: 1px solid $primary-color;
+  #programsLink {
+    font-weight: 600;
+    border-bottom: 1px solid $primary-color;
+  }
 }
-}
+
 .pageOnWhoweserve {
-#whoweserveLink {
-  font-weight: 600;
-  border-bottom: 1px solid $primary-color;
+  #whoweserveLink {
+    font-weight: 600;
+    border-bottom: 1px solid $primary-color;
+  }
 }
-}
+
 .pageOnVolunteer {
-#volunteerLink {
-  font-weight: 600;
-  border-bottom: 1px solid $primary-color;
+  #volunteerLink {
+    font-weight: 600;
+    border-bottom: 1px solid $primary-color;
+  }
 }
-}
+
 .pageOnContact {
-#contactLink {
-  font-weight: 600;
-  border-bottom: 1px solid $primary-color;
+  #contactLink {
+    font-weight: 600;
+    border-bottom: 1px solid $primary-color;
+  }
 }
+
+.pageOnDonate {
+  #donateLink {
+    font-weight: 600;
+    border-bottom: 1px solid $primary-color;
+  }
 }

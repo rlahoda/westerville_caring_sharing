@@ -424,7 +424,7 @@ nav {
   .navList a {
     color: inherit; }
   .navList > li {
-    padding: 15px 15px;
+    padding: 15px;
     width: 100%; }
     @media only screen and (min-width: 780px) {
       .navList > li {
@@ -434,6 +434,9 @@ nav {
   text-decoration: none; }
   .navLink:hover {
     border-bottom: 1px solid black; }
+
+.logoContainer {
+  padding-left: 20px; }
 
 .logo {
   width: 90px;
@@ -471,6 +474,10 @@ nav {
   border-bottom: 1px solid #af232e; }
 
 .pageOnContact #contactLink {
+  font-weight: 600;
+  border-bottom: 1px solid #af232e; }
+
+.pageOnDonate #donateLink {
   font-weight: 600;
   border-bottom: 1px solid #af232e; }
 
@@ -532,7 +539,7 @@ nav {
 .flexImage {
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover; }
+  background-size: contain; }
 
 .flexText {
   padding: 0 10px; }
@@ -574,7 +581,9 @@ nav {
           align-items: flex-end; }
 
 ul.infoList > li {
-  margin: 25px; }
+  margin: 25px;
+  padding-left: 20px;
+  text-indent: -20px; }
 
 .buttonLinkShadow {
   background-color: #af232e;

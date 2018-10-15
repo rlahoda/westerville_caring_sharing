@@ -49,7 +49,7 @@ $primary-color: #af232e;
 .flexImage {
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
 }
 
 .flexText {
@@ -88,6 +88,8 @@ $primary-color: #af232e;
 ul.infoList {
 & > li {
     margin: 25px;
+    padding-left: 20px;
+    text-indent: -20px;
   }
 
 }
