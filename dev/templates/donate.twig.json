@@ -2,5 +2,7 @@
   "pageTitle" : "Donate Today!",
   "pageSubHeading": "Be a part of bringing help to those in need",
   "pageOn": "pageOnDonate",
-  "headerImage": "projects.jpg"
+  "headerImage": "projects.jpg",
+  "image1": "supplies.jpg",
+  "image2": "food-drive2.jpg"
 }
